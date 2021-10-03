@@ -24,7 +24,7 @@ cp .env.example laravel/.env
 docker-compose up -d
 ```
 
-see http://localhost:8080
+see http://localhost:8000
 
 
 regenerate the `APP_KEY` (will be automatically injected into `.env`)
