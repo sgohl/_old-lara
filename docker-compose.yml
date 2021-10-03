@@ -1,0 +1,40 @@
+version: "2.4"
+
+services:
+
+  laraplay:
+    image: php:8
+    container_name: laraplay
+    restart: always
+    command: php artisan serve --host 0.0.0.0
+    working_dir: /www
+    volumes:
+      - ${PWD}/laravel:/www
+    networks:
+      - default
+    labels:
+      - "treafik.enable=true"
+      - "traefik.http.services.php.loadbalancer.server.port=8000"
+      - "traefik.http.routers.php.rule=Host(`localhost`)"
+
+  mysql:
+    image: mariadb
+    container_name: mysql
+    restart: always
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_USER: "laravel"
+      MYSQL_PASSWORD: "laravel"
+      MYSQL_DATABASE: "laravel"
+
+volumes:
+  
+  mysql:
+
+networks:
+  
+  default:
+    name: up_default
+    external: true
