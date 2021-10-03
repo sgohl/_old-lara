@@ -18,11 +18,14 @@ copy `.env.example` from this repo
 cp .env.example laravel/.env
 ```
 
-## Start:
+## Start
 
 ```bash
 docker-compose up -d
 ```
+
+see http://localhost:8080
+
 
 regenerate the `APP_KEY` (will be automatically injected into `.env`)
 
