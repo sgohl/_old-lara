@@ -18,14 +18,6 @@ copy `.env.example` from this repo
 cp .env.example laravel/.env
 ```
 
-to force https, add to `app/Providers/AppServiceProvider.php`
-```bash
-    public function boot()
-    {
-        \Illuminate\Support\Facades\URL::forceScheme('https');
-    }
-```
-
 ## Start:
 
 ```bash
@@ -45,3 +37,11 @@ function Composer() {
 }
 ```
 
+To use a https reverse proxy, you need to force https.
+Add to `app/Providers/AppServiceProvider.php`:
+```bash
+    public function boot()
+    {
+        \Illuminate\Support\Facades\URL::forceScheme('https');
+    }
+```
