@@ -19,7 +19,7 @@ cp .env.example laravel/.env
 ## Start
 
 ```bash
-docker-compose --build up -d
+docker-compose up --build -d
 ```
 see http://localhost:8000
 
