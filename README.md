@@ -43,7 +43,7 @@ function Php() {
     ;;
     *)
       CMD="php ${@}"
-      echo docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash -c "${CMD}"
+      docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash -c "${CMD}"
     ;;
   esac
 }
