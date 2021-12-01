@@ -55,8 +55,11 @@ alias php=Php
 ### Generate `APP_KEY` (will be automatically injected into `.env`)
 
 ```bash
+cd laravel
 Php artisan key:generate
 ```
+
+## Notes
 
 To use a https reverse proxy, you need to force https.
 Add to `app/Providers/AppServiceProvider.php`:
