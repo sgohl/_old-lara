@@ -4,10 +4,10 @@ Start by forking this repo, then:
 
 composer create-project
 ```bash
-docker run --rm -v $PWD:/www --workdir /www composer create-project laravel/laravel laravel
+docker run --rm -v $PWD:/app composer create-project laravel/laravel laravel
 ```
 
-Fix root permissions for local dev (don't do this in prod!)
+Fix root permissions for local dev
 
 ```bash
 sudo chmod 777 -R laravel
@@ -36,7 +36,7 @@ docker run --rm -v $PWD/laravel:/www -w /www php:8 php artisan key:generate
 composer docker bash function (always execute in laravel folder as if composer was installed natively):
 ```bash
 function Composer() {
-  docker run --rm -it -v $PWD:/www --workdir /www composer $@
+  docker run --rm -it -v $PWD:/app composer $@
 }
 ```
 
