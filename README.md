@@ -42,7 +42,8 @@ function Php() {
       docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash
     ;;
     *)
-      docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash -c "${@}"
+      CMD="php ${@}"
+      echo docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash -c "${CMD}"
     ;;
   esac
 }
