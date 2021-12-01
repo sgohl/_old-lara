@@ -12,6 +12,8 @@ services:
     working_dir: /www
     volumes:
       - ${PWD}/laravel:/www
+    networks:
+      - laravel
     ports:
       - 8000:8000
     labels:
@@ -25,6 +27,8 @@ services:
     restart: always
     volumes:
       - mysql:/var/lib/mysql
+    networks:
+      - laravel
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
       MYSQL_USER: "laravel"
@@ -34,3 +38,7 @@ services:
 volumes:
   
   mysql:
+
+networks:
+
+  laravel:
