@@ -21,16 +21,10 @@ cp .env.example laravel/.env
 ```bash
 docker-compose up -d
 ```
-
 see http://localhost:8000
 
-regenerate the `APP_KEY` (will be automatically injected into `.env`)
 
-```bash
-docker run --rm -v $PWD/laravel:/www -w /www php:8 php artisan key:generate
-```
-
-#### bash functions (just execute as if they were installed natively)
+#### Bash functions (just execute as if they were installed natively)
 
 Commands are first-letter-uppercase by intention so it does not overlap with native installations
 
@@ -49,6 +43,12 @@ function Php() {
     ;;
   esac
 }
+```
+
+### Generate `APP_KEY` (will be automatically injected into `.env`)
+
+```bash
+Php artisan key:generate
 ```
 
 To use a https reverse proxy, you need to force https.
