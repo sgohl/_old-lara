@@ -19,7 +19,7 @@ cp .env.example laravel/.env
 ## Start
 
 ```bash
-docker-compose up -d
+docker-compose --build up -d
 ```
 see http://localhost:8000
 
@@ -35,11 +35,11 @@ function Composer() {
 function Php() {
   case $1 in
     bash) 
-      docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash
+      docker run -it --rm --network laravel -v $PWD:/www -w /www --user $(id -u) php:local bash
     ;;
     *)
       CMD="php ${@}"
-      docker run -it --rm -v $PWD:/www -w /www --user $(id -u) php:8 bash -c "${CMD}"
+      docker run -it --rm --network laravel -v $PWD:/www -w /www --user $(id -u) php:local bash -c "${CMD}"
     ;;
   esac
 }
