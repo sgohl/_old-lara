@@ -1,5 +1,3 @@
-Start by forking this repo, then:
-
 ## Installation
 
 composer create-project
