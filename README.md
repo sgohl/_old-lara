@@ -45,6 +45,13 @@ function Php() {
 }
 ```
 
+if you really want to override the native ones:
+```
+alias composer=Composer
+alias Php=php
+```
+
+
 ### Generate `APP_KEY` (will be automatically injected into `.env`)
 
 ```bash
