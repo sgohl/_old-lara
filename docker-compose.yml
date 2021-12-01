@@ -7,7 +7,7 @@ services:
     container_name: laravel
     restart: always
     build:
-      context: .
+      context: laravel
     command: php artisan serve --host 0.0.0.0
     working_dir: /www
     volumes:
