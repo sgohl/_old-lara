@@ -31,7 +31,9 @@ regenerate the `APP_KEY` (will be automatically injected into `.env`)
 docker run --rm -v $PWD/laravel:/www -w /www php:8 php artisan key:generate
 ```
 
-bash functions (always execute in laravel folder as if composer was installed natively):
+bash functions (always execute in laravel folder as if composer was installed natively)
+Commands are first-letter-uppercase by intention so it does not overlap with native installations
+
 ```bash
 function Composer() {
   docker run --rm -it -v $PWD:/app composer ${@}
