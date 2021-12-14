@@ -75,3 +75,29 @@ Add to `app/Providers/AppServiceProvider.php`:
         \Illuminate\Support\Facades\URL::forceScheme('https');
     }
 ```
+
+Connect mysql-shell:
+```
+docker exec -it mysql mysql
+MariaDB [(none)]> use laravel;
+```
+
+
+#  AdminLTE Installation (notes from the original docs)
+
+Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
+
+```
+Composer require jeroennoten/laravel-adminlte
+Php artisan adminlte:install
+Composer require laravel/ui
+Php artisan ui bootstrap --auth
+Php artisan adminlte:install --only=auth_views
+```
+
+artisan migrate:
+```
+Php artisan migrate
+```
+
+
