@@ -2,7 +2,7 @@
 
 composer create-project
 ```bash
-docker run --rm -v $PWD:/app composer create-project laravel/laravel laravel
+docker run --rm -v $PWD:/app:Z composer create-project laravel/laravel laravel
 ```
 
 Fix root permissions for local dev
@@ -30,16 +30,16 @@ Commands are first-letter-uppercase by intention so it does not overlap with nat
 
 ```bash
 function Composer() {
-  docker run --rm -it -v $PWD:/app composer ${@}
+  docker run --rm -it -v $PWD:/app:Z composer ${@}
 }
 function Php() {
   case $1 in
     bash) 
-      docker run -it --rm --network laravel -v $PWD:/www -w /www --user $(id -u) php:local bash
+      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash
     ;;
     *)
       CMD="php ${@}"
-      docker run -it --rm --network laravel -v $PWD:/www -w /www --user $(id -u) php:local bash -c "${CMD}"
+      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash -c "${CMD}"
     ;;
   esac
 }
