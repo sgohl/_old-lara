@@ -11,7 +11,7 @@ services:
     command: php artisan serve --host 0.0.0.0
     working_dir: /www
     volumes:
-      - ${PWD}/laravel:/www:Z
+      - ${PWD}/laravel:/www:z
     networks:
       - laravel
     ports:
