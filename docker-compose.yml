@@ -3,7 +3,7 @@ version: "2.4"
 services:
 
   laravel:
-    image: php:8
+    image: php:local
     container_name: laravel
     restart: always
     build:
