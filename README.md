@@ -50,10 +50,7 @@ cd laravel
 Php artisan key:generate
 ```
 
-go to http://localhost:8000
-
-
-## Start
+# Start
 
 ```bash
 docker-compose up --build -d
@@ -64,7 +61,11 @@ sudo setenforce 0
 ```
 
 
-## Notes
+go to http://localhost:8000
+
+
+
+### Notes
 
 To use a https reverse proxy, you need to force https.
 Add to `app/Providers/AppServiceProvider.php`:
