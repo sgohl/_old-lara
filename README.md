@@ -24,7 +24,7 @@ docker-compose up --build -d
 see http://localhost:8000
 
 if laravel container is constantly restarting, stating `Could not open input file: artisan` then you're using a system where SELinux Z-labeling does not work with Docker. You can temporarily set SELinux to permissive:
-``
+```
 sudo setenforce 0
 ```
 
