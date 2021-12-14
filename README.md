@@ -37,7 +37,7 @@ function Php() {
 }
 ```
 
-if you really want to override the native ones:
+if you really want to replace the native ones (which might not exist):
 ```
 alias composer=Composer
 alias php=Php
