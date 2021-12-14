@@ -21,12 +21,20 @@ cp .env.example laravel/.env
 ```bash
 docker-compose up --build -d
 ```
-see http://localhost:8000
-
 if laravel container is constantly restarting, stating `Could not open input file: artisan` then you're using a system where SELinux Z-labeling does not work with Docker. You can temporarily set SELinux to permissive:
 ```
 sudo setenforce 0
 ```
+
+### Generate `APP_KEY` (will be automatically injected into `.env`)
+
+```bash
+cd laravel
+Php artisan key:generate
+```
+
+go to http://localhost:8000
+
 
 #### Bash functions (just execute as if they were installed natively)
 
@@ -55,13 +63,6 @@ alias composer=Composer
 alias php=Php
 ```
 
-
-### Generate `APP_KEY` (will be automatically injected into `.env`)
-
-```bash
-cd laravel
-Php artisan key:generate
-```
 
 ## Notes
 
