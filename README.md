@@ -42,6 +42,12 @@ cd laravel
 php artisan key:generate
 ```
 
+### Execute Default Migrations
+
+```
+php artisan migrate
+```
+
 
 ### Notes
 
@@ -52,12 +58,6 @@ Add to `app/Providers/AppServiceProvider.php`:
     {
         \Illuminate\Support\Facades\URL::forceScheme('https');
     }
-```
-
-Connect mysql-shell:
-```
-docker exec -it mysql mysql
-MariaDB [(none)]> use laravel;
 ```
 
 
@@ -72,10 +72,3 @@ Composer require laravel/ui
 Php artisan ui bootstrap --auth
 Php artisan adminlte:install --only=auth_views
 ```
-
-artisan migrate:
-```
-Php artisan migrate
-```
-
-
