@@ -3,30 +3,17 @@ This is not meant for public! I'm a Laravel Beginner and these are kind-of my no
 
 ## Installation
 
-composer create-project
 ```bash
 docker run --rm -v $PWD:/app:Z composer create-project laravel/laravel laravel
-```
-
-Fix root permissions for local dev
-
-```bash
 sudo chmod 777 -R laravel
-```
-
-copy `.env.example` from this repo
-```bash
 cp .env.example laravel/.env
+sudo setenforce 0
 ```
 
 # Start
 
 ```bash
 docker-compose up --build -d
-```
-if laravel container is constantly restarting, stating `Could not open input file: artisan` then you're using a system where SELinux Z-labeling does not work with Docker. You can temporarily set SELinux to permissive:
-```
-sudo setenforce 0
 ```
 
 go to http://localhost:8000
