@@ -1,4 +1,4 @@
-This is not meant for public! I'm a Laravel Beginner and these are kind-of my notes to record how I got a boilerplate running with all features I want.
+This is not meant for public! I'm a Laravel Beginner and these are kind-of my notes to record how I got a boilerplate running with all features I want to get it reproducable later on.
 
 
 ## Installation
