@@ -46,6 +46,9 @@ php artisan key:generate
 
 ```
 php artisan migrate
+
+# check:
+docker exec -t mysql mysql -e 'use laravel; show tables;'
 ```
 
 
