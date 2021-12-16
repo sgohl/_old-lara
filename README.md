@@ -111,7 +111,7 @@ php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsSe
 php artisan migrate
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
-# port 6001:
+# port 6001
 php artisan websockets:serve
 ```
 
