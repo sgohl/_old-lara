@@ -34,7 +34,7 @@ go to http://localhost:8000
 
 #### Bash functions
 
-these functions provide an almost feeling of `composer` and `node/npm` as if they were natively installed.
+these functions provide an almost feeling of `composer` and `node/npm` as if they were natively installed but use docker run commands.
 
 ```
 source .bashrc
