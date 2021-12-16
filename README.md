@@ -80,6 +80,7 @@ php artisan adminlte:install
 composer require laravel/ui
 php artisan ui bootstrap --auth
 php artisan adminlte:install --only=auth_views
+php artisan adminlte:install --only=main_views
 ```
 
 # Laravel Mix
