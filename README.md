@@ -70,7 +70,6 @@ Add to `app/Providers/AppServiceProvider.php`:
     }
 ```
 
-
 #  AdminLTE Installation (notes from the original docs)
 
 Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
@@ -81,4 +80,24 @@ php artisan adminlte:install
 composer require laravel/ui
 php artisan ui bootstrap --auth
 php artisan adminlte:install --only=auth_views
+```
+
+# Laravel Mix
+
+https://laravel-mix.com/docs/6.0/installation#laravel-projects
+
+```
+npm install
+
+# separate terminal (or screen):
+npm run watch
+```
+
+# Livewire
+
+https://laravel-livewire.com/docs/2.x/quickstart
+
+```
+composer require livewire/livewire
+php artisan vendor:publish --tag=livewire:config
 ```
