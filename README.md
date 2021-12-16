@@ -88,7 +88,7 @@ npm run watch
 
 # Livewire
 
-while installing, listen to: https://open.spotify.com/track/6FWoYwZa13llS7nj0SG65F?si=67d4ed2ab99b4fc3  
+while installing, listen to: https://open.spotify.com/track/6FWoYwZa13llS7nj0SG65F  
 this is mandatory! otherwise it won't work! trust me.
 
 https://laravel-livewire.com/docs/2.x/quickstart
