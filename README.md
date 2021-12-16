@@ -103,7 +103,7 @@ php artisan vendor:publish --tag=livewire:config
 https://beyondco.de/docs/laravel-websockets/getting-started/installation
 
 ```
-# as for now, 2021-12-17, installation fails, so workaround:
+# as for now, 2021-12-17, installation fails (deps); workaround:
 composer require guzzlehttp/psr7:^1.5
 
 composer require beyondcode/laravel-websockets
