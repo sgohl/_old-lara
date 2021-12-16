@@ -107,3 +107,14 @@ https://laravel-livewire.com/docs/2.x/quickstart
 composer require livewire/livewire
 php artisan vendor:publish --tag=livewire:config
 ```
+
+
+
+# Routes
+
+example route
+```
+Route::get('/example', function () {
+    return view('example');
+});
+```
