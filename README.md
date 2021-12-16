@@ -1,3 +1,6 @@
+This is not meant for public! I'm a Laravel Beginner and there are kind-of my notes to record how I got a boilerplate running with all features I want.
+
+
 ## Installation
 
 composer create-project
