@@ -102,7 +102,7 @@ php artisan vendor:publish --tag=livewire:config
 
 # Routes
 
-example route
+example route for `routes/web.php`
 ```
 Route::get('/example', function () {
     return view('example');
