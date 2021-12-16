@@ -83,6 +83,11 @@ php artisan adminlte:install --only=auth_views
 php artisan adminlte:install --only=main_views
 ```
 
+Copy basic page from examples to `resources/views`
+```
+cp ../examples/home.blade.php resources/views/home.blade.php
+```
+
 # Laravel Mix
 
 https://laravel-mix.com/docs/6.0/installation#laravel-projects
