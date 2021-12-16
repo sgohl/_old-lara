@@ -15,22 +15,23 @@ function Php() {
 alias composer=Composer
 alias php=Php
 
+
 ## NODEJS helpers
 NODE=lts
 
-function npm
+function Npm
 {
   node npm ${@}
 }
-function yarn
+function Yarn
 {
   node yarn ${@}
 }
-function npx
+function Npx
 {
   node npx $@
 }
-function node
+function Node
 {
   unset EXEC
   unset NODEUSER
@@ -66,3 +67,8 @@ function node
 	docker run -it --rm --name node --user ${NODEUSER:-node} --net=host -v $PWD:$PWD --workdir $PWD node:${NODE:-lts} bash -c "${CMD}"
   fi
 }
+
+alias node=Node
+alias npm=Npm
+alias npx=Npx
+alias yarn=Yarn
