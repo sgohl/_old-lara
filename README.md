@@ -98,7 +98,18 @@ composer require livewire/livewire
 php artisan vendor:publish --tag=livewire:config
 ```
 
+# Laravel Echo / Websockets
 
+https://beyondco.de/docs/laravel-websockets/getting-started/installation
+
+```
+composer require beyondcode/laravel-websockets
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+php artisan migrate
+php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+#
+php artisan websockets:serve
+```
 
 # Routes
 
