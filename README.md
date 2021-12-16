@@ -74,9 +74,9 @@ Add to `app/Providers/AppServiceProvider.php`:
 Full reference: https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
 
 ```
-Composer require jeroennoten/laravel-adminlte
-Php artisan adminlte:install
-Composer require laravel/ui
-Php artisan ui bootstrap --auth
-Php artisan adminlte:install --only=auth_views
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:install
+composer require laravel/ui
+php artisan ui bootstrap --auth
+php artisan adminlte:install --only=auth_views
 ```
