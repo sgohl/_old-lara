@@ -39,7 +39,7 @@ source .bashrc
 
 ```bash
 cd laravel
-Php artisan key:generate
+php artisan key:generate
 ```
 
 
