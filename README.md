@@ -32,7 +32,9 @@ sudo setenforce 0
 go to http://localhost:8000
 
 
-#### Bash functions (just execute as if they were installed natively)
+#### Bash functions
+
+these functions provide an almost feeling of `composer` and `node/npm` as if they were natively installed.
 
 ```
 source .bashrc
