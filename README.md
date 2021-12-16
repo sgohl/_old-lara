@@ -90,9 +90,6 @@ cp ../examples/home.blade.php resources/views/home.blade.php
 
 # Laravel Mix
 
-while installing, listen to: https://open.spotify.com/track/6FWoYwZa13llS7nj0SG65F?si=67d4ed2ab99b4fc3
-this is mandatory!
-
 https://laravel-mix.com/docs/6.0/installation#laravel-projects
 
 ```
@@ -103,6 +100,9 @@ npm run watch
 ```
 
 # Livewire
+
+while installing, listen to: https://open.spotify.com/track/6FWoYwZa13llS7nj0SG65F?si=67d4ed2ab99b4fc3
+this is mandatory! otherwise it won't work!
 
 https://laravel-livewire.com/docs/2.x/quickstart
 
