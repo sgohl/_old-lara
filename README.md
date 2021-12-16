@@ -40,7 +40,9 @@ these functions provide an almost feeling of `composer` and `node/npm` as if the
 source .bashrc
 ```
 
-### Generate `APP_KEY` (will be automatically injected into `.env`)
+### Generate `APP_KEY`
+
+will be automatically injected into `.env`
 
 ```bash
 cd laravel
