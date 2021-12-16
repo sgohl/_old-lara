@@ -16,40 +16,6 @@ copy `.env.example` from this repo
 cp .env.example laravel/.env
 ```
 
-#### Bash functions (just execute as if they were installed natively)
-
-Commands are first-letter-uppercase by intention so it does not overlap with native installations
-
-```bash
-function Composer() {
-  docker run --rm -it -v $PWD:/app:Z composer ${@}
-}
-function Php() {
-  case $1 in
-    bash) 
-      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash
-    ;;
-    *)
-      CMD="php ${@}"
-      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash -c "${CMD}"
-    ;;
-  esac
-}
-```
-
-if you really want to replace the native ones (which might not exist):
-```
-alias composer=Composer
-alias php=Php
-```
-
-### Generate `APP_KEY` (will be automatically injected into `.env`)
-
-```bash
-cd laravel
-Php artisan key:generate
-```
-
 # Start
 
 ```bash
@@ -60,9 +26,21 @@ if laravel container is constantly restarting, stating `Could not open input fil
 sudo setenforce 0
 ```
 
-
 go to http://localhost:8000
 
+
+#### Bash functions (just execute as if they were installed natively)
+
+```
+source .bashrc
+```
+
+### Generate `APP_KEY` (will be automatically injected into `.env`)
+
+```bash
+cd laravel
+Php artisan key:generate
+```
 
 
 ### Notes
