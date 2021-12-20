@@ -1,5 +1,5 @@
 function Composer() {
-  docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint /usr/local/bin/composer --user $(id -u) php:local ${@}
+  docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint composer --user $(id -u) php:local ${@}
 }
 function Php() {
   case $1 in
