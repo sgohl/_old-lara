@@ -1,5 +1,5 @@
 function Composer() {
-  docker run --rm -it -v $PWD:/app:Z composer ${@}
+  docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint /usr/local/bin/composer --user $(id -u) php:local ${@}
 }
 function Php() {
   case $1 in
@@ -7,9 +7,8 @@ function Php() {
       docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash
     ;;
     *)
-      CMD="${@}"
-      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint /usr/local/bin/composer --user $(id -u) php:local ${CMD}
-    ;;
+      CMD="php ${@}"
+      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash -c "${CMD}"    ;;
   esac
 }
 alias composer=Composer
