@@ -7,8 +7,8 @@ function Php() {
       docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --user $(id -u) php:local bash
     ;;
     *)
-      CMD="php ${@}"
-      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint /usr/local/bin/composer --user $(id -u) php:local "${CMD}"
+      CMD="${@}"
+      docker run -it --rm --network laravel -v $PWD:/www:Z -w /www --entrypoint /usr/local/bin/composer --user $(id -u) php:local ${CMD}
     ;;
   esac
 }
