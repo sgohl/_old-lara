@@ -14,6 +14,8 @@ RUN yes | pecl install -o -f igbinary && docker-php-ext-enable igbinary
 RUN yes | pecl install -o -f redis && docker-php-ext-enable redis
 
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-xpm=/usr/include 
-RUN docker-php-ext-install gd intl tokenizer xml zip curl opcache ldap soap pdo_mysql mysqli bcmath exif pcntl
+RUN docker-php-ext-install gd intl  xml zip curl opcache ldap soap pdo_mysql mysqli bcmath exif pcntl
+
+# tokenizer
 
 RUN apk del autoconf gcc g++ libtool make && rm -rf /tmp/pear
