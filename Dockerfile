@@ -2,7 +2,7 @@ FROM php:8
 
 ENV COMPOSER_MEMORY_LIMIT=-1
 
-RUN apt-get update && apt-get -y install libldap2-dev
+RUN apt-get update && apt-get -y install libldap2-dev git-core
 
 RUN docker-php-ext-install pdo_mysql ldap
 
